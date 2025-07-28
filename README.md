@@ -29,10 +29,16 @@ Gets user input (WASD) and updates movement direction.
 # run()
 Main game loop: draw → input → logic → wait.
 # Game control
-  Flow:
-1. Initialize game
-2. Loop: display → get input → update. game → delay.
-3. End when collision occurs.
+ Controls:
+- W: Move Up.
+- A: Move Left
+- S: Move Down.
+- A: Move Right.
+- X: Quit game.
+ Flow:
+ 1. Initialize game
+ 2. Loop: display → get input → update game → delay.
+ 3. End when collision occurs.
 # Game loop
 ```
 while (!gameOver) {
