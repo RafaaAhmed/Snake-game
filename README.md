@@ -1,3 +1,7 @@
+# Group Members
+- Maab Mirghani Ali [20-410].
+- Amna Mustafa Yousif [22-405].
+- Rafaa Zain Alabdeen Marzoug [22-324].
 # Snake-game
 Snake game written in C++ for OOP project
 # Variables
