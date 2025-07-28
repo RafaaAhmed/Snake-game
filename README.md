@@ -1,5 +1,15 @@
 # Snake-game
-Snake game created with C++ for OOP project
+Snake game written in C++ for OOP project
+# Variables
+```cpp
+- bool gameOver;                    // Flag to indicate game state
+- int width = 20, height = 10;      // Game board dimensions
+- int x, y;                         // Snake head coordinates
+- int foodX, foodY;                 // Food coordinates
+- int score;                        // Player score
+- Direction dir;                    // Current movement direction
+- vector<pair<int, int>> tail;      // Coordinates of tail segments
+```
 # Functions
 - main
 - SnakeGame
@@ -20,7 +30,7 @@ Checks if food overlaps with snake body.
 # draw()
 Clears screen and displays game board with snake, food, and score.
 # input()
-Gets user input (WASD) and updates movement direction.
+Gets user input (WASD or X) and updates movement direction.
 # logic()
 - Moves snake head
 - Checks collisions (walls, self)
@@ -29,23 +39,27 @@ Gets user input (WASD) and updates movement direction.
 # run()
 Main game loop: draw → input → logic → wait.
 # Game control
- Controls:
+# Key Action
 - W: Move Up.
 - A: Move Left
 - S: Move Down.
 - A: Move Right.
 - X: Quit game.
- Flow:
- 1. Initialize game
- 2. Loop: display → get input → update game → delay.
+# Flow
+ 1. Initialize game state.
+ 2. Repeat:
+  - Draw current state.
+  -  Get input from player.
+  -  Update game logic.
+  -  Delay 100ms.
  3. End when collision occurs.
 # Game loop
-```
+```cpp
 while (!gameOver) {
-    draw();     // Show current state
-    input();    // Get player move
-    logic();    // Update positions
-    usleep();   // Wait 100ms
+    draw();     // Render the board
+    input();    // Handle user input
+    logic();    // Update positions, check collisions
+    usleep(100000); // Delay
 }
 ```
 # Movement
